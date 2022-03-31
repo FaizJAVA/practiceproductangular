@@ -4,6 +4,8 @@ const bodyparser=require('body-parser');
 const app=express();
 const port=process.env.PORT || 3000;
 const adminRouteImport=require('./route/adminroute');
+const cors = require("cors");
+app.use(cors());
 mongoose.connect('mongodb+srv://Faizaan:123@newprojectculster.b4vzf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority').then(result=>{
     console.log('Success');
 }).catch(err=>{
